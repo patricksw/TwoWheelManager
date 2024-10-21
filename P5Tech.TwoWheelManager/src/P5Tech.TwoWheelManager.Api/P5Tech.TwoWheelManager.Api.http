@@ -1,0 +1,6 @@
+@P5Tech.TwoWheelManager.Api_HostAddress = http://localhost:5244
+
+GET {{P5Tech.TwoWheelManager.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

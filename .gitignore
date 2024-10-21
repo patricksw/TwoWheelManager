@@ -1,0 +1,16 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/P5Tech.TwoWheelManager/.vs
+/P5Tech.TwoWheelManager/src/P5Tech.TwoWheelManager.Api/bin/Debug/net8.0
+/P5Tech.TwoWheelManager/src/P5Tech.TwoWheelManager.Api/obj
+/P5Tech.TwoWheelManager/src/P5Tech.TwoWheelManager.Application/bin/Debug/net8.0
+/P5Tech.TwoWheelManager/src/P5Tech.TwoWheelManager.Application/obj
+/P5Tech.TwoWheelManager/src/P5Tech.TwoWheelManager.CrossCutting/obj/Debug/net8.0
+/P5Tech.TwoWheelManager/src/P5Tech.TwoWheelManager.Domain/bin/Debug/net8.0
+/P5Tech.TwoWheelManager/src/P5Tech.TwoWheelManager.Domain/obj
+/P5Tech.TwoWheelManager/src/P5Tech.TwoWheelManager.Infra.MongoDb/bin/Debug/net8.0
+/P5Tech.TwoWheelManager/src/P5Tech.TwoWheelManager.Infra.MongoDb/obj
+/P5Tech.TwoWheelManager/tst/P5Tech.TwoWheelManager.UnitTest/bin/Debug/net8.0
+/P5Tech.TwoWheelManager/tst/P5Tech.TwoWheelManager.UnitTest/obj

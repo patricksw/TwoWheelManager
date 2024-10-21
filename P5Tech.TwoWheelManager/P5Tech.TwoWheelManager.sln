@@ -1,0 +1,78 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Presentation", "1. Presentation", "{35D77FAC-5436-42CB-B2C5-5E6595CD8C1A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Application", "2. Application", "{23EAC065-AB64-4371-96A3-DFD4C1EB9E99}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Domain", "3. Domain", "{7797B2D0-B5E4-4643-89BF-1F5EEA4A5BCA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. Infra", "4. Infra", "{B311A801-E893-4B22-AF4A-2A3468871200}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6. Tests", "6. Tests", "{7CB54D08-74FC-4181-950C-175D4DC9740B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P5Tech.TwoWheelManager.Application", "src\P5Tech.TwoWheelManager.Application\P5Tech.TwoWheelManager.Application.csproj", "{94AF2F1D-77D1-4309-990A-541B4CB1E543}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P5Tech.TwoWheelManager.Domain", "src\P5Tech.TwoWheelManager.Domain\P5Tech.TwoWheelManager.Domain.csproj", "{9CCE7B6F-810D-4F87-A7A2-874DAD49DA75}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1 Mongo Db", "4.1 Mongo Db", "{ED33055B-D489-470E-94CC-712358DB9FC8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P5Tech.TwoWheelManager.Infra.MongoDb", "src\P5Tech.TwoWheelManager.Infra.MongoDb\P5Tech.TwoWheelManager.Infra.MongoDb.csproj", "{EEDEC29C-CD03-454A-A3CB-0F3A6D9B0096}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P5Tech.TwoWheelManager.UnitTest", "tst\P5Tech.TwoWheelManager.UnitTest\P5Tech.TwoWheelManager.UnitTest.csproj", "{77107166-5BEE-4863-B57D-5CACF09E9798}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P5Tech.TwoWheelManager.Api", "src\P5Tech.TwoWheelManager.Api\P5Tech.TwoWheelManager.Api.csproj", "{4FF9C419-D2BE-41EF-B384-A0F20C28C937}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5. Cross Cutting", "5. Cross Cutting", "{3D25DEAD-A432-4CC7-A9C8-D181B4E8F3FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P5Tech.TwoWheelManager.CrossCutting", "src\P5Tech.TwoWheelManager.CrossCutting\P5Tech.TwoWheelManager.CrossCutting.csproj", "{5EF76A83-7518-4C5E-AD2B-43844400ADE0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{94AF2F1D-77D1-4309-990A-541B4CB1E543}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94AF2F1D-77D1-4309-990A-541B4CB1E543}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94AF2F1D-77D1-4309-990A-541B4CB1E543}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94AF2F1D-77D1-4309-990A-541B4CB1E543}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CCE7B6F-810D-4F87-A7A2-874DAD49DA75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CCE7B6F-810D-4F87-A7A2-874DAD49DA75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CCE7B6F-810D-4F87-A7A2-874DAD49DA75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CCE7B6F-810D-4F87-A7A2-874DAD49DA75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEDEC29C-CD03-454A-A3CB-0F3A6D9B0096}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEDEC29C-CD03-454A-A3CB-0F3A6D9B0096}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEDEC29C-CD03-454A-A3CB-0F3A6D9B0096}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEDEC29C-CD03-454A-A3CB-0F3A6D9B0096}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77107166-5BEE-4863-B57D-5CACF09E9798}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77107166-5BEE-4863-B57D-5CACF09E9798}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77107166-5BEE-4863-B57D-5CACF09E9798}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77107166-5BEE-4863-B57D-5CACF09E9798}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FF9C419-D2BE-41EF-B384-A0F20C28C937}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FF9C419-D2BE-41EF-B384-A0F20C28C937}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FF9C419-D2BE-41EF-B384-A0F20C28C937}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FF9C419-D2BE-41EF-B384-A0F20C28C937}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EF76A83-7518-4C5E-AD2B-43844400ADE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EF76A83-7518-4C5E-AD2B-43844400ADE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EF76A83-7518-4C5E-AD2B-43844400ADE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EF76A83-7518-4C5E-AD2B-43844400ADE0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{94AF2F1D-77D1-4309-990A-541B4CB1E543} = {23EAC065-AB64-4371-96A3-DFD4C1EB9E99}
+		{9CCE7B6F-810D-4F87-A7A2-874DAD49DA75} = {7797B2D0-B5E4-4643-89BF-1F5EEA4A5BCA}
+		{ED33055B-D489-470E-94CC-712358DB9FC8} = {B311A801-E893-4B22-AF4A-2A3468871200}
+		{EEDEC29C-CD03-454A-A3CB-0F3A6D9B0096} = {ED33055B-D489-470E-94CC-712358DB9FC8}
+		{77107166-5BEE-4863-B57D-5CACF09E9798} = {7CB54D08-74FC-4181-950C-175D4DC9740B}
+		{4FF9C419-D2BE-41EF-B384-A0F20C28C937} = {35D77FAC-5436-42CB-B2C5-5E6595CD8C1A}
+		{5EF76A83-7518-4C5E-AD2B-43844400ADE0} = {3D25DEAD-A432-4CC7-A9C8-D181B4E8F3FA}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7F3A2B32-D648-4D23-9E8A-FA28A48145B0}
+	EndGlobalSection
+EndGlobal
