@@ -2,8 +2,16 @@
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Mapster" Version="7.4.0" />
+    <PackageReference Include="MongoDB.Driver" Version="3.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\P5Tech.TwoWheelManager.CrossCutting\P5Tech.TwoWheelManager.CrossCutting.csproj" />
+    <ProjectReference Include="..\P5Tech.TwoWheelManager.Domain\P5Tech.TwoWheelManager.Domain.csproj" />
+  </ItemGroup>
 
 </Project>
