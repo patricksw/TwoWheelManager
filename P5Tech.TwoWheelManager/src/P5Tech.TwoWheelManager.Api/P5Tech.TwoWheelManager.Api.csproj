@@ -1,11 +1,19 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Mapster" Version="7.4.0" />
+    <PackageReference Include="Mapster.DependencyInjection" Version="1.0.1" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\P5Tech.TwoWheelManager.Application\P5Tech.TwoWheelManager.Application.csproj" />
+    <ProjectReference Include="..\P5Tech.TwoWheelManager.CrossCutting\P5Tech.TwoWheelManager.CrossCutting.csproj" />
+    <ProjectReference Include="..\P5Tech.TwoWheelManager.Infra.MongoDb\P5Tech.TwoWheelManager.Infra.MongoDb.csproj" />
   </ItemGroup>
 
 </Project>
