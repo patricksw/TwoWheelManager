@@ -14,3 +14,5 @@
 /P5Tech.TwoWheelManager/src/P5Tech.TwoWheelManager.Infra.MongoDb/obj
 /P5Tech.TwoWheelManager/tst/P5Tech.TwoWheelManager.UnitTest/bin/Debug/net8.0
 /P5Tech.TwoWheelManager/tst/P5Tech.TwoWheelManager.UnitTest/obj
+/P5Tech.TwoWheelManager/src/P5Tech.TwoWheelManager.CrossCutting/bin/Debug/net8.0
+/P5Tech.TwoWheelManager/src/P5Tech.TwoWheelManager.CrossCutting/obj
