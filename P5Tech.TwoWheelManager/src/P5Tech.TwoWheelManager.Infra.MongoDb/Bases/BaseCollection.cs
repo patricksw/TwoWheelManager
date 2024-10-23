@@ -1,6 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
-using MongoDB.Bson;
+﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
+using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace P5Tech.TwoWheelManager.Infra.MongoDb.Bases
 {
@@ -10,6 +11,9 @@ namespace P5Tech.TwoWheelManager.Infra.MongoDb.Bases
         [BsonId]
         [BsonElement("_id")]
         [BsonRepresentation(BsonType.ObjectId)]
-        public string Id { get; set; }
+        public string InternalId { get; set; }
+
+        [BsonRepresentation(BsonType.String)]
+        public Guid Id { get; set; }
     }
 }

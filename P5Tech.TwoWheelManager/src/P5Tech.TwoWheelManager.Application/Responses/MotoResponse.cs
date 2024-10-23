@@ -1,9 +1,10 @@
-﻿using P5Tech.TwoWheelManager.Infra.MongoDb.Bases;
+﻿using System;
 
-namespace P5Tech.TwoWheelManager.Infra.MongoDb.Collections
+namespace P5Tech.TwoWheelManager.Application.Responses
 {
-    public class MotoCollection : BaseCollection
+    public class MotoResponse
     {
+        public Guid Id { get; set; }
         public string Identificador { get; set; }
         public int Ano { get; set; }
         public string Modelo { get; set; }
