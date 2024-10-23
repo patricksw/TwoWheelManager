@@ -1,9 +1,9 @@
 ﻿using Mapster;
 using MapsterMapper;
 using Microsoft.Extensions.DependencyInjection;
-using P5Tech.TwoWheelManager.Application.Interfaces;
 using P5Tech.TwoWheelManager.Application.Services;
 using P5Tech.TwoWheelManager.Domain.Repositories;
+using P5Tech.TwoWheelManager.Domain.Services;
 using P5Tech.TwoWheelManager.Infra.MongoDb.Repositories;
 
 namespace P5Tech.TwoWheelManager.Api.Configuration
