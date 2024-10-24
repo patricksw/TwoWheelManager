@@ -16,8 +16,4 @@
     <ProjectReference Include="..\P5Tech.TwoWheelManager.Infra.MongoDb\P5Tech.TwoWheelManager.Infra.MongoDb.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Controllers\Bases\" />
-  </ItemGroup>
-
 </Project>

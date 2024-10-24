@@ -36,18 +36,16 @@ namespace P5Tech.TwoWheelManager.Infra.MongoDb.Repositories
             return dto.Select(x => _mapper.Map<Moto>(x));
         }
 
-        public async Task<bool> UpdatePlaca(Guid id, string placa)
+        public async Task<bool> Update(Guid id, Moto domain)
         {
             var filter = FindById(id);
             var dto = await _context.CollectionMotos.Find(filter).FirstOrDefaultAsync();
 
-            dto.Placa = placa;
+            dto.Identificador = domain.Identificador;
+            dto.Ano = domain.Ano;
+            dto.Modelo = domain.Modelo;
+            dto.Placa = domain.Placa;
 
-            return await Update(dto);
-        }
-
-        private async Task<bool> Update(MotoCollection dto)
-        {
             ReplaceOneResult updateResult = await _context.CollectionMotos.ReplaceOneAsync(filter: g => g.Id == dto.Id, replacement: dto);
             return updateResult.IsAcknowledged && updateResult.ModifiedCount > 0;
         }

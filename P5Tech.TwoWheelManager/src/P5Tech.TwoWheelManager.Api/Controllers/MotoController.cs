@@ -1,7 +1,8 @@
 ﻿using MapsterMapper;
 using Microsoft.AspNetCore.Mvc;
-using P5Tech.TwoWheelManager.Application.Requests;
-using P5Tech.TwoWheelManager.Application.Responses;
+using P5Tech.TwoWheelManager.Api.Controllers.Bases;
+using P5Tech.TwoWheelManager.Application.MotoConcept.Requests;
+using P5Tech.TwoWheelManager.Application.MotoConcept.Responses;
 using P5Tech.TwoWheelManager.Domain;
 using P5Tech.TwoWheelManager.Domain.Services;
 using System;
@@ -12,15 +13,15 @@ namespace P5Tech.TwoWheelManager.Api.Controllers
 {
     [ApiController]
     [Route("motos")]
-    public class MotoController(IMotoService motoService, IMapper mapper) : Controller
+    public class MotoController(IMotoService service, IMapper mapper) : ControllerBase
     {
-        private readonly IMotoService _motoService = motoService;
+        private readonly IMotoService _service = service;
         private readonly IMapper _mapper = mapper;
 
         [HttpGet("")]
         public async Task<IEnumerable<MotoResponse>> GetAll()
         {
-            var motos = await _motoService.GetAll();
+            var motos = await _service.GetAll();
             return _mapper.Map<IEnumerable<MotoResponse>>(motos);
         }
 
@@ -28,7 +29,7 @@ namespace P5Tech.TwoWheelManager.Api.Controllers
         public async Task<MotoResponse> GetById(string id)
         {
             if (!Guid.TryParse(id, out Guid _id)) throw new InvalidCastException();
-            var moto = await _motoService.GetById(_id);
+            var moto = await _service.GetById(_id);
             return _mapper.Map<MotoResponse>(moto);
         }
 
@@ -37,7 +38,7 @@ namespace P5Tech.TwoWheelManager.Api.Controllers
         {
             try
             {
-                return Ok(await _motoService.Add(_mapper.Map<Moto>(request)));
+                return Ok(await _service.Add(_mapper.Map<Moto>(request)));
             }
             catch
             {
@@ -46,12 +47,12 @@ namespace P5Tech.TwoWheelManager.Api.Controllers
         }
 
         [HttpPut("{id}/placa")]
-        public async Task<IActionResult> Update(string id, EditPlacaRequest request)
+        public async Task<IActionResult> UpdatePlaca(string id, EditPlacaRequest request)
         {
             try
             {
                 if (!Guid.TryParse(id, out Guid _id)) throw new InvalidCastException();
-                await _motoService.UpdatePlaca(_id, request.Placa);
+                await _service.UpdatePlaca(_id, request.Placa);
                 return Ok(BaseResponse.Sucesss("Placa modificada com sucesso"));
             }
             catch
@@ -66,7 +67,7 @@ namespace P5Tech.TwoWheelManager.Api.Controllers
             try
             {
                 if (!Guid.TryParse(id, out Guid _id)) throw new InvalidCastException();
-                await _motoService.Delete(_id);
+                await _service.Delete(_id);
                 return Ok();
             }
             catch

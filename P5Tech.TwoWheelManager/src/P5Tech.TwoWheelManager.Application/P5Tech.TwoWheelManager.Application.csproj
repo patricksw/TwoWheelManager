@@ -7,14 +7,11 @@
   <ItemGroup>
     <PackageReference Include="FluentValidation" Version="11.10.0" />
     <PackageReference Include="Mapster" Version="7.4.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\P5Tech.TwoWheelManager.Domain\P5Tech.TwoWheelManager.Domain.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Moto\" />
   </ItemGroup>
 
 </Project>

@@ -1,4 +1,4 @@
-﻿namespace P5Tech.TwoWheelManager.Api.Controllers
+﻿namespace P5Tech.TwoWheelManager.Api.Controllers.Bases
 {
     public class BaseResponse
     {
