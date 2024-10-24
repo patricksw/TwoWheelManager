@@ -10,6 +10,6 @@ namespace P5Tech.TwoWheelManager.Domain.Repositories
         Task<bool> Delete(Guid id);
         Task<Moto> Read(Guid id);
         Task<IEnumerable<Moto>> ReadAll();
-        Task<bool> UpdatePlaca(Guid id, string placa);
+        Task<bool> Update(Guid id, Moto domain);
     }
 }

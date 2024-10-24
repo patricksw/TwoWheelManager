@@ -17,5 +17,8 @@ namespace P5Tech.TwoWheelManager.Infra.MongoDb.Context
         }
 
         public IMongoCollection<MotoCollection> CollectionMotos => _db.GetCollection<MotoCollection>("Moto");
+        public IMongoCollection<EntregadorCollection> CollectionEntregadores => _db.GetCollection<EntregadorCollection>("Entregador");
+        public IMongoCollection<LocacaoCollection> CollectionLocacoes => _db.GetCollection<LocacaoCollection>("Locacao");
+        public IMongoCollection<PlanoLocacaoCollection> CollectionPlanoLocacoes => _db.GetCollection<PlanoLocacaoCollection>("PlanoLocacao");
     }
 }

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace P5Tech.TwoWheelManager.Application.Requests
+namespace P5Tech.TwoWheelManager.Application.MotoConcept.Requests
 {
     public record AddMotoRequest(string Identificador,
                                  int Ano,
