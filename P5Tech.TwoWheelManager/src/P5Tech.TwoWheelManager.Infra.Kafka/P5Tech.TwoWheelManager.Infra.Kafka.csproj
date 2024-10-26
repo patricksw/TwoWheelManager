@@ -5,14 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="FluentValidation" Version="11.10.0" />
-    <PackageReference Include="Mapster" Version="7.4.0" />
+    <PackageReference Include="Confluent.Kafka" Version="2.6.0" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="8.0.2" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\P5Tech.TwoWheelManager.Domain\P5Tech.TwoWheelManager.Domain.csproj" />
-    <ProjectReference Include="..\P5Tech.TwoWheelManager.Infra.Kafka\P5Tech.TwoWheelManager.Infra.Kafka.csproj" />
   </ItemGroup>
 
 </Project>

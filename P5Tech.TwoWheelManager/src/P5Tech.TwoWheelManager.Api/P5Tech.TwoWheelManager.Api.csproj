@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Confluent.Kafka" Version="2.6.0" />
     <PackageReference Include="Mapster" Version="7.4.0" />
     <PackageReference Include="Mapster.DependencyInjection" Version="1.0.1" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
@@ -13,6 +14,8 @@
   <ItemGroup>
     <ProjectReference Include="..\P5Tech.TwoWheelManager.Application\P5Tech.TwoWheelManager.Application.csproj" />
     <ProjectReference Include="..\P5Tech.TwoWheelManager.CrossCutting\P5Tech.TwoWheelManager.CrossCutting.csproj" />
+    <ProjectReference Include="..\P5Tech.TwoWheelManager.Infra.File\P5Tech.TwoWheelManager.Infra.File.csproj" />
+    <ProjectReference Include="..\P5Tech.TwoWheelManager.Infra.Kafka\P5Tech.TwoWheelManager.Infra.Kafka.csproj" />
     <ProjectReference Include="..\P5Tech.TwoWheelManager.Infra.MongoDb\P5Tech.TwoWheelManager.Infra.MongoDb.csproj" />
   </ItemGroup>
 

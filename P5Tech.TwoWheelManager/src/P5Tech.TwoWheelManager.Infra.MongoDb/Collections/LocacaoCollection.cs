@@ -18,5 +18,6 @@ namespace P5Tech.TwoWheelManager.Infra.MongoDb.Collections
         public DateTime? DataPrevisaoTermino { get; set; }
         public DateTime? DataDevolucao { get; set; }
         public int Plano { get; set; }
+        public decimal ValorDiaria { get; set; }
     }
 }
