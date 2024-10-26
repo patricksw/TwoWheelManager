@@ -39,7 +39,6 @@ namespace P5Tech.TwoWheelManager.Infra.MongoDb.Repositories
             dto.DataNascimento = domain.DataNascimento;
             dto.NumeroCnh = domain.NumeroCnh;
             dto.TipoCnh = domain.TipoCnh;
-            dto.ImagemCnh = domain.ImagemCnh;
 
             ReplaceOneResult updateResult = await _context.CollectionEntregadores.ReplaceOneAsync(filter: g => g.Id == dto.Id, replacement: dto);
             return updateResult.IsAcknowledged && updateResult.ModifiedCount > 0;

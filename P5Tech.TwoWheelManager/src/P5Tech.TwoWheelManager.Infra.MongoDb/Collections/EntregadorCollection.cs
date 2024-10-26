@@ -11,6 +11,5 @@ namespace P5Tech.TwoWheelManager.Infra.MongoDb.Collections
         public DateTime DataNascimento { get; set; }
         public string NumeroCnh { get; set; }
         public string TipoCnh { get; set; }
-        public string ImagemCnh { get; set; }
     }
 }

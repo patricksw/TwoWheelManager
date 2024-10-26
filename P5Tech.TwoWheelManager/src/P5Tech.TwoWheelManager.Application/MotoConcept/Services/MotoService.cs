@@ -1,15 +1,18 @@
 ﻿using P5Tech.TwoWheelManager.Domain;
+using P5Tech.TwoWheelManager.Domain.Queue;
 using P5Tech.TwoWheelManager.Domain.Repositories;
 using P5Tech.TwoWheelManager.Domain.Services;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace P5Tech.TwoWheelManager.Application.MotoConcept.Services
 {
-    public class MotoService(IMotoRepository repository) : IMotoService
+    public class MotoService(IMotoRepository repository, INotificacaoKafkaProducer notificacaoKafkaProducer) : IMotoService
     {
         private readonly IMotoRepository _repository = repository;
+        private readonly INotificacaoKafkaProducer _notificacaoKafkaProducer = notificacaoKafkaProducer;
 
         public async Task<IEnumerable<Moto>> GetAll()
         {
@@ -19,6 +22,11 @@ namespace P5Tech.TwoWheelManager.Application.MotoConcept.Services
 
         public async Task<Guid> Add(Moto moto)
         {
+            if ((await _repository.ReadAll()).Any(x => x.Placa == moto.Placa))
+                throw new InvalidOperationException();
+
+            _notificacaoKafkaProducer.Produce(Notificacao.New(moto));
+
             return await _repository.Create(moto);
         }
 
