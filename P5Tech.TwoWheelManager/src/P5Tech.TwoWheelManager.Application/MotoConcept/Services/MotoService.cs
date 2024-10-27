@@ -23,9 +23,9 @@ namespace P5Tech.TwoWheelManager.Application.MotoConcept.Services
         public async Task<Guid> Add(Moto moto)
         {
             if ((await _repository.ReadAll()).Any(x => x.Placa == moto.Placa))
-                throw new InvalidOperationException();
+                throw new InvalidOperationException("Placa já existe");
 
-            _notificacaoKafkaProducer.Produce(Notificacao.New(moto));
+            _notificacaoKafkaProducer.Produce(Notificacao.New<Moto>(moto));
 
             return await _repository.Create(moto);
         }

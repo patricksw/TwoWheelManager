@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Worker">
+﻿<Project Sdk="Microsoft.NET.Sdk.Worker">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -6,12 +6,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Mapster" Version="7.4.0" />
+    <PackageReference Include="Mapster.DependencyInjection" Version="1.0.1" />
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.1" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\P5Tech.TwoWheelManager.Application\P5Tech.TwoWheelManager.Application.csproj" />
     <ProjectReference Include="..\P5Tech.TwoWheelManager.Domain\P5Tech.TwoWheelManager.Domain.csproj" />
+    <ProjectReference Include="..\P5Tech.TwoWheelManager.Infra.Kafka\P5Tech.TwoWheelManager.Infra.Kafka.csproj" />
     <ProjectReference Include="..\P5Tech.TwoWheelManager.Infra.MongoDb\P5Tech.TwoWheelManager.Infra.MongoDb.csproj" />
   </ItemGroup>
 </Project>

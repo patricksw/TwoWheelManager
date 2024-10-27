@@ -7,6 +7,6 @@ namespace P5Tech.TwoWheelManager.Domain.Services
     {
         Task<Guid> Add(Locacao locacao);
         Task<Locacao> GetById(Guid id);
-        Task SetDevolucao(Guid id, DateTime devolucao);
+        Task SetDevolucao(Guid id, DateOnly devolucao);
     }
 }

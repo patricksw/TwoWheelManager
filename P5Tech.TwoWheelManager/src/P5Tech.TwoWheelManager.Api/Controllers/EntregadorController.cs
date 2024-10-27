@@ -1,5 +1,6 @@
 ﻿using MapsterMapper;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using P5Tech.TwoWheelManager.Api.Controllers.Bases;
 using P5Tech.TwoWheelManager.Application.EntregadorConcept.Requests;
 using P5Tech.TwoWheelManager.Domain;
@@ -11,8 +12,11 @@ namespace P5Tech.TwoWheelManager.Api.Controllers
 {
     [ApiController]
     [Route("entregadores")]
-    public class EntregadorController(IEntregadorService service, IMapper mapper) : ControllerBase
+    public class EntregadorController(IEntregadorService service,
+                                      IMapper mapper,
+                                      ILogger<EntregadorController> logger) : ControllerBase
     {
+        private readonly ILogger<EntregadorController> _logger = logger;
         private readonly IEntregadorService _service = service;
         private readonly IMapper _mapper = mapper;
 
@@ -23,8 +27,9 @@ namespace P5Tech.TwoWheelManager.Api.Controllers
             {
                 return Ok(await _service.Add(_mapper.Map<Entregador>(request)));
             }
-            catch
+            catch (Exception ex)
             {
+                _logger.LogError(ex, "Erro ao criar entregador");
                 return BadRequest(BaseResponse.Invalid());
             }
         }
@@ -38,8 +43,9 @@ namespace P5Tech.TwoWheelManager.Api.Controllers
                 await _service.UpdateImagemCnh(_id, request.ImagemCnh);
                 return Ok();
             }
-            catch
+            catch (Exception ex)
             {
+                _logger.LogError(ex, "Erro ao atualizar imagem CNH");
                 return BadRequest(BaseResponse.Invalid());
             }
         }

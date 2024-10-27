@@ -1,5 +1,6 @@
 ﻿using MapsterMapper;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using P5Tech.TwoWheelManager.Api.Controllers.Bases;
 using P5Tech.TwoWheelManager.Application.MotoConcept.Requests;
 using P5Tech.TwoWheelManager.Application.MotoConcept.Responses;
@@ -13,8 +14,9 @@ namespace P5Tech.TwoWheelManager.Api.Controllers
 {
     [ApiController]
     [Route("motos")]
-    public class MotoController(IMotoService service, IMapper mapper) : ControllerBase
+    public class MotoController(IMotoService service, IMapper mapper, ILogger<MotoController> logger) : ControllerBase
     {
+        private readonly ILogger<MotoController> _logger = logger;
         private readonly IMotoService _service = service;
         private readonly IMapper _mapper = mapper;
 
@@ -40,8 +42,9 @@ namespace P5Tech.TwoWheelManager.Api.Controllers
             {
                 return Ok(await _service.Add(_mapper.Map<Moto>(request)));
             }
-            catch
+            catch (Exception ex)
             {
+                _logger.LogError(ex, "Erro ao criar moto");
                 return BadRequest(BaseResponse.Invalid());
             }
         }
@@ -55,8 +58,9 @@ namespace P5Tech.TwoWheelManager.Api.Controllers
                 await _service.UpdatePlaca(_id, request.Placa);
                 return Ok(BaseResponse.Sucesss("Placa modificada com sucesso"));
             }
-            catch
+            catch (Exception ex)
             {
+                _logger.LogError(ex, "Erro ao atualizar placa");
                 return BadRequest(BaseResponse.Invalid());
             }
         }
@@ -70,8 +74,9 @@ namespace P5Tech.TwoWheelManager.Api.Controllers
                 await _service.Delete(_id);
                 return Ok();
             }
-            catch
+            catch (Exception ex)
             {
+                _logger.LogError(ex, "Erro ao deletar moto");
                 return BadRequest(BaseResponse.Invalid());
             }
         }

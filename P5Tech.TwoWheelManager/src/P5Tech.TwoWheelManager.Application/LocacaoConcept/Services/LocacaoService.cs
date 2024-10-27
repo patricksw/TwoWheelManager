@@ -22,7 +22,7 @@ namespace P5Tech.TwoWheelManager.Application.MotoConcept.Services
             return await _repository.Create(locacao);
         }
 
-        public async Task SetDevolucao(Guid id, DateTime devolucao)
+        public async Task SetDevolucao(Guid id, DateOnly devolucao)
         {
             var locacao = await _repository.Read(id);
             locacao.SetDevolucao(devolucao);
