@@ -8,7 +8,7 @@ namespace P5Tech.TwoWheelManager.Domain
         public string Identificador { get; init; }
         public int Ano { get; init; }
         public string Modelo { get; init; }
-        public string Placa { get; private set; }
+        public string Placa { get; set; }
 
         public void SetPlaca(string placa) => Placa = placa;
     }

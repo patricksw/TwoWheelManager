@@ -16,7 +16,7 @@ namespace P5Tech.TwoWheelManager.Infra.MongoDb.Repositories
         public async Task<Guid> Create(Moto domain)
         {
             var dto = _mapper.Map<MotoNotificacaoCollection>(domain);
-            await _context.CollectionMotos.InsertOneAsync(dto);
+            await _context.CollectionMotoNotificacoes.InsertOneAsync(dto);
             return dto.Id;
         }
     }

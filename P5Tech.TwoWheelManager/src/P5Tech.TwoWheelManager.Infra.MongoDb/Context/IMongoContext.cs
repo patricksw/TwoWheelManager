@@ -9,5 +9,6 @@ namespace P5Tech.TwoWheelManager.Infra.MongoDb.Context
         IMongoCollection<EntregadorCollection> CollectionEntregadores { get; }
         IMongoCollection<LocacaoCollection> CollectionLocacoes { get; }
         IMongoCollection<PlanoLocacaoCollection> CollectionPlanoLocacoes { get; }
+        IMongoCollection<MotoNotificacaoCollection> CollectionMotoNotificacoes { get; }
     }
 }
