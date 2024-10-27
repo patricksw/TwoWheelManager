@@ -1,11 +1,15 @@
-﻿namespace P5Tech.TwoWheelManager.Domain
+﻿using System;
+
+namespace P5Tech.TwoWheelManager.Domain
 {
     public class Moto
     {
-        public string Id { get; init; }
+        public Guid Id { get; init; }
         public string Identificador { get; init; }
-        public string Ano { get; init; }
+        public int Ano { get; init; }
         public string Modelo { get; init; }
-        public string Placa { get; init; }
+        public string Placa { get; set; }
+
+        public void SetPlaca(string placa) => Placa = placa;
     }
 }

@@ -16,3 +16,9 @@
 /P5Tech.TwoWheelManager/tst/P5Tech.TwoWheelManager.UnitTest/obj
 /P5Tech.TwoWheelManager/src/P5Tech.TwoWheelManager.CrossCutting/bin/Debug/net8.0
 /P5Tech.TwoWheelManager/src/P5Tech.TwoWheelManager.CrossCutting/obj
+/P5Tech.TwoWheelManager/src/P5Tech.TwoWheelManager.Infra.File/bin/Debug/net8.0
+/P5Tech.TwoWheelManager/src/P5Tech.TwoWheelManager.Infra.File/obj
+/P5Tech.TwoWheelManager/src/P5Tech.TwoWheelManager.Infra.Kafka/bin/Debug/net8.0
+/P5Tech.TwoWheelManager/src/P5Tech.TwoWheelManager.Infra.Kafka/obj
+/P5Tech.TwoWheelManager/src/P5Tech.TwoWheelManager.Worker/bin/Debug/net8.0
+/P5Tech.TwoWheelManager/src/P5Tech.TwoWheelManager.Worker/obj

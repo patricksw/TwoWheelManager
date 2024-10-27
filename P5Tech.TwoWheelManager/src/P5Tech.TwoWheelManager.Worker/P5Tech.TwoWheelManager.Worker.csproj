@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <UserSecretsId>dotnet-P5Tech.TwoWheelManager.Worker-fd6d1a4b-b838-4eef-a4b5-319b46350c75</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Mapster" Version="7.4.0" />
+    <PackageReference Include="Mapster.DependencyInjection" Version="1.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\P5Tech.TwoWheelManager.Application\P5Tech.TwoWheelManager.Application.csproj" />
+    <ProjectReference Include="..\P5Tech.TwoWheelManager.Domain\P5Tech.TwoWheelManager.Domain.csproj" />
+    <ProjectReference Include="..\P5Tech.TwoWheelManager.Infra.Kafka\P5Tech.TwoWheelManager.Infra.Kafka.csproj" />
+    <ProjectReference Include="..\P5Tech.TwoWheelManager.Infra.MongoDb\P5Tech.TwoWheelManager.Infra.MongoDb.csproj" />
+  </ItemGroup>
+</Project>
