@@ -27,7 +27,21 @@ namespace P5Tech.TwoWheelManager.Infra.MongoDb.Repositories
         {
             var filter = FindById(id);
             var dto = await _context.CollectionLocacoes.Find(filter).FirstOrDefaultAsync();
-            return _mapper.Map<Locacao>(dto);
+
+            var domain = new Locacao
+            {
+                Id = dto.Id,
+                EntregadorId = dto.EntregadorId,
+                MotoId = dto.MotoId,
+                DataInicio = dto.DataInicio,
+                DataTermino = dto.DataTermino,
+                DataPrevisaoTermino = dto.DataPrevisaoTermino,
+                Plano = dto.Plano
+            };
+            domain.SetValorDiaria(dto.ValorDiaria);
+            if (dto.DataDevolucao.HasValue)
+                domain.SetDevolucao(dto.DataDevolucao.Value);
+            return domain;
         }
 
         public async Task<IEnumerable<Locacao>> ReadAll()
